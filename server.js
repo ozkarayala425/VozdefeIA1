@@ -9,12 +9,12 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// 🔑 Conexión con OpenAI
+// Cliente OpenAI
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
 });
 
-// Ruta principal de chat
+// Ruta del chat
 app.post("/chat", async (req, res) => {
   try {
     const userMessage = req.body.message;
@@ -24,7 +24,7 @@ app.post("/chat", async (req, res) => {
       messages: [
         {
           role: "system",
-          content: "Eres una IA cristiana llamada VozdefeIA. Responde con mensajes bíblicos, claros, cortos y con amor."
+          content: "Eres VozdefeIA, una IA cristiana. Responde con mensajes bíblicos, amorosos y claros."
         },
         {
           role: "user",
@@ -45,5 +45,5 @@ app.post("/chat", async (req, res) => {
 
 // Iniciar servidor
 app.listen(port, () => {
-  console.log(`Servidor corriendo en puerto ${port}`);
+  console.log("Servidor corriendo en puerto " + port);
 });
