@@ -5,16 +5,15 @@ import OpenAI from "openai";
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Middlewares
 app.use(cors());
 app.use(express.json());
 
-// Cliente OpenAI
+// 🔌 Cliente OpenAI
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Ruta del chat
+// 📖 CHAT VOZDEFIA1
 app.post("/chat", async (req, res) => {
   try {
     const message = req.body.message;
@@ -22,7 +21,7 @@ app.post("/chat", async (req, res) => {
     const systemPrompt = `
 Eres VozdefeIA1, un asistente bíblico basado en la Santa Biblia.
 
-Responde siempre con este formato:
+Responde siempre así:
 
 📖 Respuesta:
 📚 Base bíblica:
@@ -32,8 +31,8 @@ Responde siempre con este formato:
 
 Reglas:
 - No inventes versículos
-- Sé claro, respetuoso y cristiano
-- Usa lenguaje sencillo
+- Usa lenguaje claro y cristiano
+- Sé respetuoso y esperanzador
 `;
 
     const response = await client.chat.completions.create({
@@ -54,7 +53,7 @@ Reglas:
   }
 });
 
-// Iniciar servidor
+// ▶️ INICIAR SERVIDOR
 app.listen(port, () => {
   console.log("Servidor corriendo en puerto " + port);
 });
