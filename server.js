@@ -10,8 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 // Cliente OpenAI
+import OpenAI from "openai";
+
 const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 // Ruta del chat
