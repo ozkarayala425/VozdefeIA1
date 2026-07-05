@@ -10,8 +10,6 @@ app.use(cors());
 app.use(express.json());
 
 // Cliente OpenAI
-import OpenAI from "openai";
-
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -19,25 +17,36 @@ const client = new OpenAI({
 // Ruta del chat
 app.post("/chat", async (req, res) => {
   try {
-    const userMessage = req.body.message;
+    const message = req.body.message;
+
+    const systemPrompt = `
+Eres VozdefeIA1, un asistente bíblico basado en la Santa Biblia.
+
+Responde siempre con este formato:
+
+📖 Respuesta:
+📚 Base bíblica:
+✨ Explicación:
+🙏 Aplicación:
+❤️ Esperanza:
+
+Reglas:
+- No inventes versículos
+- Sé claro, respetuoso y cristiano
+- Usa lenguaje sencillo
+`;
 
     const response = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [
-        {
-          role: "system",
-          content: "Eres VozdefeIA, una IA cristiana. Responde con mensajes bíblicos, amorosos y claros."
-        },
-        {
-          role: "user",
-          content: userMessage
-        }
+        { role: "system", content: systemPrompt },
+        { role: "user", content: message }
       ]
     });
 
-    const reply = response.choices[0].message.content;
-
-    res.json({ reply });
+    res.json({
+      reply: response.choices[0].message.content
+    });
 
   } catch (error) {
     console.error(error);
