@@ -1,118 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VozdefeIA1</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0b141a;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-/* Header */
-header {
-    background: #202c33;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-}
-
-/* Chat area */
-#chat {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Messages */
-.msg {
-    max-width: 75%;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 10px;
-    color: white;
-}
-
-.user {
-    background: #005c4b;
-    align-self: flex-end;
-}
-
-.bot {
-    background: #202c33;
-    align-self: flex-start;
-}
-
-/* Input area */
-#inputArea {
-    display: flex;
-    padding: 10px;
-    background: #202c33;
-}
-
-#textInput {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-}
-
-button {
-    margin-left: 10px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 50%;
-    background: #00a884;
-    color: white;
-    font-size: 16px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>VozdefeIA1</title>
 </head>
+<body style="font-family: Arial; text-align:center; padding:40px;">
 
-<body>
+  <h1>🙏 VozdefeIA1</h1>
 
-<header>VozdefeIA1 ✝️</header>
+  <p>Escribe algo y prueba tu aplicación</p>
 
-<div id="chat"></div>
+  <input id="input" placeholder="Escribe aquí..." />
+  <button onclick="responder()">Enviar</button>
 
-<div id="inputArea">
-    <input id="textInput" type="text" placeholder="Escribe un mensaje...">
-    <button onclick="sendMessage()">➤</button>
-</div>
+  <p id="output"></p>
 
-<script>
-function addMessage(text, type) {
-    const chat = document.getElementById("chat");
-    const msg = document.createElement("div");
-    msg.className = "msg " + type;
-    msg.innerText = text;
-    chat.appendChild(msg);
-    chat.scrollTop = chat.scrollHeight;
-}
+  <script>
+    function responder() {
+      const texto = document.getElementById("input").value;
 
-function sendMessage() {
-    const input = document.getElementById("textInput");
-    const text = input.value;
-    if (text.trim() === "") return;
-
-    addMessage(text, "user");
-    input.value = "";
-
-    setTimeout(() => {
-        addMessage("🙏 Estoy procesando tu mensaje...", "bot");
-    }, 800);
-}
-</script>
+      document.getElementById("output").innerText =
+        "Respuesta simulada: " + texto;
+    }
+  </script>
 
 </body>
 </html>
