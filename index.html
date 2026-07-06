@@ -1,10 +1,10 @@
 async function send() {
   const input = document.getElementById("input");
-  const text = input.value;
+  const texto = input.value;
 
-  if (!text) return;
+  if (!texto) return;
 
-  addMessage(text, "user");
+  addMessage(texto, "user");
   input.value = "";
 
   try {
@@ -13,7 +13,7 @@ async function send() {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({ message: text })
+      body: JSON.stringify({ message: texto })
     });
 
     const data = await res.json();
