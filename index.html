@@ -1,2 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VozdefeIA1 - Voz de Fe</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    background: #1e3a5f;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+select, button {
+    padding: 12px;
+    margin: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background: #1e3a5f;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-box {
+    height: 150px;
+    background: #eee;
+    border-radius: 10px;
+    padding: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">𓂀 VozdefeIA1</div>
+    <p id="subtitle">Una voz de fe para el mundo</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2 id="welcome">Bienvenido</h2>
+
+<p id="message">
+Comparte, aprende y fortalece tu fe mediante la inteligencia artificial.
+</p>
+
+<label>🌎 Idioma:</label>
+
+<select id="language" onchange="changeLanguage()">
+<option value="es">Español</option>
+<option value="en">English</option>
+<option value="pt">Português</option>
+<option value="fr">Français</option>
+<option value="de">Deutsch</option>
+</select>
+
+</div>
+
+
+<div class="card">
+
+<h2>📖 Biblia</h2>
+
+<p id="verse">
+"Yo soy el camino, y la verdad, y la vida."
+<br>
+Juan 14:6
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>💬 VozdefeIA Chat</h2>
+
+<div class="chat-box">
+<p id="chatText">
+Próximamente podrás conversar con VozdefeIA.
+</p>
+</div>
+
+<button>
+🎤 Hablar con VozdefeIA
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+function changeLanguage(){
+
+let lang = document.getElementById("language").value;
+
+if(lang=="en"){
+
+document.getElementById("subtitle").innerHTML="A voice of faith for the world";
+document.getElementById("welcome").innerHTML="Welcome";
+document.getElementById("message").innerHTML="Share, learn and strengthen your faith through artificial intelligence.";
+document.getElementById("chatText").innerHTML="Soon you will be able to talk with VozdefeIA.";
+
+}
+
+else if(lang=="pt"){
+
+document.getElementById("subtitle").innerHTML="Uma voz de fé para o mundo";
+document.getElementById("welcome").innerHTML="Bem-vindo";
+document.getElementById("message").innerHTML="Compartilhe, aprenda e fortaleça sua fé através da inteligência artificial.";
+document.getElementById("chatText").innerHTML="Em breve você poderá conversar com VozdefeIA.";
+
+}
+
+else if(lang=="fr"){
+
+document.getElementById("subtitle").innerHTML="Une voix de foi pour le monde";
+document.getElementById("welcome").innerHTML="Bienvenue";
+document.getElementById("message").innerHTML="Partagez, apprenez et fortifiez votre foi grâce à l'intelligence artificielle.";
+document.getElementById("chatText").innerHTML="Bientôt vous pourrez parler avec VozdefeIA.";
+
+}
+
+else if(lang=="de"){
+
+document.getElementById("subtitle").innerHTML="Eine Stimme des Glaubens für die Welt";
+document.getElementById("welcome").innerHTML="Willkommen";
+document.getElementById("message").innerHTML="Teile, lerne und stärke deinen Glauben durch künstliche Intelligenz.";
+document.getElementById("chatText").innerHTML="Bald kannst du mit VozdefeIA sprechen.";
+
+}
+
+else {
+
+document.getElementById("subtitle").innerHTML="Una voz de fe para el mundo";
+document.getElementById("welcome").innerHTML="Bienvenido";
+document.getElementById("message").innerHTML="Comparte, aprende y fortalece tu fe mediante la inteligencia artificial.";
+document.getElementById("chatText").innerHTML="Próximamente podrás conversar con VozdefeIA.";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
