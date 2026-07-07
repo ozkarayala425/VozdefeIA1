@@ -1,26 +1,2 @@
-async function send() {
-  const input = document.getElementById("input");
-  const texto = input.value;
-
-  if (!texto) return;
-
-  addMessage(texto, "user");
-  input.value = "";
-
-  try {
-    const res = await fetch("/api/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ message: texto })
-    });
-
-    const data = await res.json();
-
-    addMessage(data.reply, "bot");
-
-  } catch (error) {
-    addMessage("Error al conectar con el servidor", "bot");
-  }
-}
+<!DOCTYPE html>
+<html lang="es">
