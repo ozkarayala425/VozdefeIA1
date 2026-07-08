@@ -8,7 +8,116 @@
 
 <title>VozdefeIA1 - Voz de Fe</title>
 
+<style><!-- CHAT BÍBLICO ESTILO WHATSAPP -->
+<div class="chat-box">
+    <div class="chat-header">
+        📖 Voz de Fe IA
+    </div>
+
+    <div id="chat-messages" class="chat-messages">
+        <div class="bot-message">
+            🙏 Hola, soy Voz de Fe IA. 
+            Pregúntame sobre la Biblia, versículos o enseñanzas de Jesús.
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input id="user-input" type="text" placeholder="Escribe tu pregunta bíblica...">
+        <button onclick="sendMessage()">➤</button>
+    </div>
+</div>
+
 <style>
+.chat-box {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #999;
+}
+
+.chat-header {
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.chat-messages {
+    height: 300px;
+    padding: 10px;
+    overflow-y: auto;
+    background: #e5ddd5;
+}
+
+.bot-message, .user-message {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.bot-message {
+    background: white;
+    text-align: left;
+}
+
+.user-message {
+    background: #dcf8c6;
+    margin-left: auto;
+    text-align: right;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.chat-input button {
+    margin-left: 5px;
+    border-radius: 50%;
+    width: 40px;
+    background: #25D366;
+    color: white;
+    border: none;
+}
+</style>
+
+<script>
+function sendMessage(){
+
+let input = document.getElementById("user-input");
+let message = input.value;
+
+if(message=="") return;
+
+let chat = document.getElementById("chat-messages");
+
+chat.innerHTML += `
+<div class="user-message">
+${message}
+</div>`;
+
+chat.innerHTML += `
+<div class="bot-message">
+📖 Estoy preparando una respuesta bíblica para ti...
+</div>`;
+
+input.value="";
+chat.scrollTop = chat.scrollHeight;
+
+}
+</script>
 
 *{
 box-sizing:border-box;
