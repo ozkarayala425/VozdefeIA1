@@ -1,132 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VozdefeIA1 - Voz de Fe</title>
+
+<style>
 
 body{
-
-font-family:Arial, sans-serif;
-background:#f4f6f8;
+font-family:Arial,sans-serif;
+background:#eaf7f7;
 margin:0;
 text-align:center;
-
 }
 
-
 header{
-
 background:#12355b;
 color:white;
 padding:25px;
-
 }
-
 
 .logo img{
-
-width:130px;
-height:130px;
-object-fit:contain;
+width:120px;
+height:120px;
 border-radius:50%;
-
+object-fit:contain;
 }
-
 
 h1{
-
-margin:10px 0;
-
+margin:10px;
 }
-
 
 .container{
-
 padding:15px;
-
 }
-
 
 .card{
-
 background:white;
-max-width:550px;
+max-width:500px;
 margin:20px auto;
-padding:25px;
+padding:20px;
 border-radius:18px;
 box-shadow:0 4px 12px rgba(0,0,0,.15);
-
 }
 
-
-select,button{
-
+select,input,button{
 width:90%;
-max-width:350px;
-padding:14px;
-margin:10px;
+padding:12px;
+margin:8px;
 border-radius:10px;
 border:none;
 font-size:16px;
-
 }
 
-
 button{
-
 background:#12355b;
 color:white;
 cursor:pointer;
-
 }
-
-
-button:hover{
-
-background:#1d568d;
-
-}
-
 
 .chat-box{
-
-height:180px;
-background:#eeeeee;
-border-radius:15px;
-padding:15px;
+background:#e5ddd5;
+height:300px;
 overflow:auto;
-
+padding:10px;
+border-radius:15px;
+text-align:left;
 }
 
+.bot{
+background:white;
+padding:10px;
+border-radius:10px;
+margin:8px;
+}
+
+.user{
+background:#dcf8c6;
+padding:10px;
+border-radius:10px;
+margin:8px;
+text-align:right;
+}
 
 footer{
-
 padding:20px;
 color:#555;
-
-}
-
-
-/* Adaptación para teléfono */
-
-@media(max-width:600px){
-
-.logo img{
-
-width:100px;
-height:100px;
-
-}
-
-
-.card{
-
-margin:15px 5px;
-
-}
-
-
-h1{
-
-font-size:25px;
-
-}
-
 }
 
 </style>
@@ -140,22 +101,14 @@ font-size:25px;
 <header>
 
 <div class="logo">
-
-<img src="logo.png" alt="Logo VozdefeIA">
-
+<img src="logo.png" alt="VozdefeIA">
 </div>
-
 
 <h1>𓂀 VozdefeIA1</h1>
 
-
-<p>
-Una voz de fe para el mundo
-</p>
-
+<p>Una voz de fe para el mundo 🌎</p>
 
 </header>
-
 
 
 <div class="container">
@@ -165,18 +118,9 @@ Una voz de fe para el mundo
 
 <h2>🙏 Bienvenido</h2>
 
-
 <p>
-
-Comparte, aprende y fortalece tu fe mediante la inteligencia artificial.
-
+Comparte, aprende y fortalece tu fe mediante inteligencia artificial.
 </p>
-
-
-<label>🌎 Idioma</label>
-
-
-<br>
 
 
 <select>
@@ -184,48 +128,102 @@ Comparte, aprende y fortalece tu fe mediante la inteligencia artificial.
 <option>Español</option>
 <option>English</option>
 <option>Português</option>
-<option>Français</option>
-<option>Deutsch</option>
 
 </select>
 
-
 </div>
 
 
 
 <div class="card">
-
 
 <h2>📖 Versículo del día</h2>
 
-
 <p>
-
 "Yo soy el camino, y la verdad, y la vida."
-
 <br><br>
-
 Juan 14:6
-
 </p>
-
 
 </div>
 
 
 
-
 <div class="card">
 
+<h2>💬 Chat Bíblico</h2>
 
-<h2>💬 VozdefeIA Chat</h2>
 
+<div id="chat" class="chat-box">
 
-<div class="chat-box">
-
-<p id="chat">
-
-🙏 Hola, soy VozdefeIA. 
+<div class="bot">
+🙏 Hola, soy VozdefeIA.
 <br>
-Pronto podrás hacer pre
+Puedes preguntarme sobre la Biblia.
+</div>
+
+</div>
+
+
+<input id="mensaje" placeholder="Escribe tu pregunta bíblica...">
+
+<button onclick="enviar()">
+Enviar ➤
+</button>
+
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+𓂀 OSCAR AYALA
+
+</footer>
+
+
+
+<script>
+
+function enviar(){
+
+let texto=document.getElementById("mensaje").value;
+
+if(texto=="") return;
+
+
+let chat=document.getElementById("chat");
+
+
+chat.innerHTML += 
+`
+<div class="user">
+${texto}
+</div>
+`;
+
+
+chat.innerHTML +=
+`
+<div class="bot">
+📖 Gracias por tu pregunta.
+Estoy preparando una respuesta bíblica para ti.
+</div>
+`;
+
+
+document.getElementById("mensaje").value="";
+
+chat.scrollTop=chat.scrollHeight;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
