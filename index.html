@@ -184,44 +184,85 @@ Enviar ➤
 
 </footer>
 
-
-
 <script>
 
 function enviar(){
 
-let texto=document.getElementById("mensaje").value;
+let texto = document.getElementById("mensaje").value.toLowerCase();
 
 if(texto=="") return;
 
+let chat = document.getElementById("chat");
 
-let chat=document.getElementById("chat");
-
-
-chat.innerHTML += 
-`
+chat.innerHTML += `
 <div class="user">
 ${texto}
 </div>
 `;
 
 
-chat.innerHTML +=
-`
+let respuesta = "🙏 Gracias por tu pregunta. Sigue buscando a Dios mediante Su Palabra 📖";
+
+
+// Respuestas bíblicas
+
+if(texto.includes("jesús") || texto.includes("jesus")){
+
+respuesta = "✝️ Jesús es el Hijo de Dios y nuestro Salvador. Él dijo: 'Yo soy el camino, y la verdad, y la vida' (Juan 14:6).";
+
+}
+
+
+else if(texto.includes("amor")){
+
+respuesta = "❤️ La Biblia enseña que Dios es amor. 'Nosotros amamos porque Él nos amó primero' (1 Juan 4:19).";
+
+}
+
+
+else if(texto.includes("moisés") || texto.includes("moises")){
+
+respuesta = "📖 Moisés fue llamado por Dios para liberar al pueblo de Israel de Egipto y guiarlo hacia la tierra prometida.";
+
+}
+
+
+else if(texto.includes("fe")){
+
+respuesta = "🙏 La fe es confiar en Dios. 'La fe es la certeza de lo que se espera, la convicción de lo que no se ve' (Hebreos 11:1).";
+
+}
+
+
+else if(texto.includes("oración") || texto.includes("oracion")){
+
+respuesta = "🙏 La oración es una manera de comunicarnos con Dios con humildad y fe.";
+
+}
+
+
+else if(texto.includes("juan 3:16")){
+
+respuesta = "✨ Juan 3:16 muestra el gran amor de Dios al enviar a su Hijo Jesucristo para dar vida eterna.";
+
+}
+
+
+chat.innerHTML += `
 <div class="bot">
-📖 Gracias por tu pregunta.
-Estoy preparando una respuesta bíblica para ti.
+${respuesta}
 </div>
 `;
 
 
-document.getElementById("mensaje").value="";
+document.getElementById("mensaje").value = "";
 
-chat.scrollTop=chat.scrollHeight;
+chat.scrollTop = chat.scrollHeight;
 
 }
 
 </script>
+
 
 
 </body>
