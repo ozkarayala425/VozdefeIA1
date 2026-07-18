@@ -62,3 +62,67 @@ function responder() {
   document.getElementById("respuesta").innerText = respuesta;
 
 }
+const comentariosBiblicos = {
+
+    "fe":
+    "🙏 FE\n\nLa fe es confiar en Dios y creer en sus promesas aunque todavía no veamos la respuesta.\n\n📖 Hebreos 11:1",
+
+    "amor":
+    "❤️ AMOR\n\nEl amor de Dios es eterno y se manifestó por medio de Jesucristo.\n\n📖 Juan 3:16",
+
+    "oracion":
+    "🙏 ORACIÓN\n\nLa oración es una conversación con Dios. Él escucha a quienes le buscan con un corazón sincero.\n\n📖 Jeremías 33:3",
+
+    "perdon":
+    "🤍 PERDÓN\n\nDios nos enseña a perdonar porque Él también nos ofrece perdón y misericordia.\n\n📖 Efesios 4:32",
+
+    "jesus":
+    "✝️ JESÚS\n\nJesús es el camino, la verdad y la vida. Él nos muestra el amor de Dios.\n\n📖 Juan 14:6",
+
+    "esperanza":
+    "🌅 ESPERANZA\n\nDios fortalece nuestro corazón y nos da esperanza en cada etapa de la vida.\n\n📖 Romanos 15:13"
+
+};
+
+
+function enviar(){
+
+let texto = document.getElementById("mensaje").value.toLowerCase();
+
+if(texto=="") return;
+
+
+let chat = document.getElementById("chat");
+
+
+chat.innerHTML += `
+<div class="user">
+${texto}
+</div>
+`;
+
+
+let respuesta =
+"🙏 Gracias por tu pregunta. Busca siempre a Dios mediante Su Palabra 📖";
+
+
+if(comentariosBiblicos[texto]){
+
+respuesta = comentariosBiblicos[texto];
+
+}
+
+
+chat.innerHTML += `
+<div class="bot">
+${respuesta}
+</div>
+`;
+
+
+document.getElementById("mensaje").value="";
+
+
+chat.scrollTop = chat.scrollHeight;
+
+}
