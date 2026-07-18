@@ -189,6 +189,8 @@ Enviar ➤
 
 <script>
 
+<script>
+
 function enviar(){
 
 let texto = document.getElementById("mensaje").value.toLowerCase();
@@ -203,88 +205,67 @@ ${texto}
 </div>
 `;
 
-
-
-// Respuestas bíblicas //
-
 let respuesta = "🙏 Gracias por tu pregunta. Sigue buscando a Dios mediante Su Palabra 📖";
 
 
 if(texto.includes("jesús") || texto.includes("jesus") || texto.includes("cristo")){
 
-respuesta = "✝️ Jesús es el Hijo de Dios y nuestro Salvador.\n\n📖 Juan 14:6 - Yo soy el camino, y la verdad, y la vida.\n\n✨ Reflexión: Cristo nos muestra el amor y la esperanza de Dios.";
-
-}
-
-else if(texto.includes("dios") || texto.includes("padre")){
-
-respuesta = "🙏 Dios es nuestro Padre celestial, creador de todas las cosas.\n\n📖 Génesis 1:1.\n\n✨ Dios nos ama y desea una relación con nosotros.";
-
-}
-
-else if(texto.includes("creación") || texto.includes("creacion") || texto.includes("mundo")){
-
-respuesta = "🌎 Dios creó los cielos y la tierra.\n\n📖 Génesis 1:1.";
-
-}
-
-else if(texto.includes("moisés") || texto.includes("moises")){
-
-respuesta = "📖 Moisés fue llamado por Dios para liberar al pueblo de Israel de Egipto.";
-
-}
-
-else if(texto.includes("noé") || texto.includes("noe") || texto.includes("arca")){
-
-respuesta = "🌈 Noé obedeció a Dios y construyó el arca por fe.";
-
-}
-
-else if(texto.includes("fe")){
-
-respuesta = "🙏 La fe es confiar en Dios.\n\n📖 Hebreos 11:1.";
-
-}
-
-else if(texto.includes("oración") || texto.includes("oracion") || texto.includes("orar")){
-
-respuesta = "🙏 La oración es hablar con Dios con humildad y confianza.";
-
-}
-
-else if(texto.includes("perdón") || texto.includes("perdon")){
-
-respuesta = "❤️ Jesús enseñó la importancia del perdón.";
-
-}
-
-else 
-
-respuesta = "💧 El bautismo representa una nueva vida en Cristo.";
-
-}
-
-else if(texto.includes("juan 3:16")){
-
-respuesta = "✨ Juan 3:16 nos revela el gran amor de Dios por la humanidad.\n\n📖 Dios entregó a su Hijo Jesucristo para ofrecernos salvación y vida eterna.";
+respuesta =
+"✝️ Jesús es el Hijo de Dios y nuestro Salvador.\n\n" +
+"📖 Juan 14:6 - Yo soy el camino, y la verdad, y la vida.\n\n" +
+"✨ Reflexión: Cristo nos muestra el amor y la esperanza de Dios.";
 
 }
 
 else if(texto.includes("pedro")){
 
 respuesta =
-"👤 Pedro fue uno de los doce discípulos de Jesús y uno de sus seguidores más cercanos.\n\n" +
-"📖 Jesús lo llamó para dejar sus redes y convertirse en pescador de hombres.\n\n" +
+"👤 Pedro fue uno de los discípulos más cercanos de Jesús.\n\n" +
+"📖 Jesús lo llamó para ser pescador de hombres.\n\n" +
 "📜 Versículo base: Mateo 4:19.\n\n" +
-"✨ Reflexión: Jesús transforma vidas y fortalece a quienes le siguen.";
+"✨ Reflexión: Dios puede transformar una vida dispuesta a seguirle.";
 
 }
+
+else if(texto.includes("dios")){
+
+respuesta =
+"🙏 Dios es nuestro Padre celestial y creador de todas las cosas.\n\n" +
+"📖 Génesis 1:1.\n\n" +
+"✨ Reflexión: Dios nos ama y desea tener una relación con nosotros.";
+
+}
+
+else if(texto.includes("fe")){
+
+respuesta =
+"🙏 La fe es confiar en Dios aun cuando no vemos todo claramente.\n\n" +
+"📖 Hebreos 11:1.";
+
+}
+
+else if(texto.includes("moisés") || texto.includes("moises")){
+
+respuesta =
+"📖 Moisés fue llamado por Dios para liberar al pueblo de Israel de Egipto.\n\n" +
+"📜 Éxodo 3.";
+
+}
+
 
 chat.innerHTML += `
 <div class="bot">
 ${respuesta}
 </div>
 `;
+
+document.getElementById("mensaje").value = "";
+
+chat.scrollTop = chat.scrollHeight;
+
+}
+
+  
 
 </script>
 
