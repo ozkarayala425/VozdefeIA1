@@ -201,52 +201,68 @@ ${texto}
 `;
 
 
-let respuesta = "🙏 Gracias por tu pregunta. Sigue buscando a Dios mediante Su Palabra 📖";
-
 
 // Respuestas bíblicas
 
-if(texto.includes("jesús") || texto.includes("jesus")){
+if(texto.includes("jesús") || texto.includes("jesus") || texto.includes("cristo")){
 
-respuesta = "✝️ Jesús es el Hijo de Dios y nuestro Salvador. Él dijo: 'Yo soy el camino, y la verdad, y la vida' (Juan 14:6).";
-
-}
-
-
-else if(texto.includes("amor")){
-
-respuesta = "❤️ La Biblia enseña que Dios es amor. 'Nosotros amamos porque Él nos amó primero' (1 Juan 4:19).";
+respuesta = "✝️ Jesús es el Hijo de Dios y nuestro Salvador.\n\n📖 Juan 14:6: Yo soy el camino, y la verdad, y la vida.\n\n✨ Jesús nos enseña el amor, el perdón y la esperanza.";
 
 }
 
+else if(texto.includes("dios") || texto.includes("padre")){
+
+respuesta = "🙏 Dios es nuestro Padre celestial, creador de todas las cosas.\n\n📖 Génesis 1:1: En el principio creó Dios los cielos y la tierra.\n\n✨ Dios nos ama y desea una relación con nosotros.";
+
+}
+
+else if(texto.includes("creación") || texto.includes("creacion") || texto.includes("mundo")){
+
+respuesta = "🌎 La Biblia enseña que Dios creó los cielos, la tierra y todo lo que existe.\n\n📖 Génesis 1:1.";
+
+}
 
 else if(texto.includes("moisés") || texto.includes("moises")){
 
-respuesta = "📖 Moisés fue llamado por Dios para liberar al pueblo de Israel de Egipto y guiarlo hacia la tierra prometida.";
+respuesta = "📖 Moisés fue llamado por Dios para liberar al pueblo de Israel de Egipto.\n\n✨ Dios mostró su poder y guió a Moisés durante su misión.";
 
 }
 
+else if(texto.includes("noé") || texto.includes("noe") || texto.includes("arca")){
+
+respuesta = "🌈 Noé obedeció a Dios y construyó el arca por fe.\n\n📖 Génesis 6:22.";
+
+}
 
 else if(texto.includes("fe")){
 
-respuesta = "🙏 La fe es confiar en Dios. 'La fe es la certeza de lo que se espera, la convicción de lo que no se ve' (Hebreos 11:1).";
+respuesta = "🙏 La fe es confiar en Dios aun cuando no vemos todo claramente.\n\n📖 Hebreos 11:1.";
 
 }
 
+else if(texto.includes("oración") || texto.includes("oracion") || texto.includes("orar")){
 
-else if(texto.includes("oración") || texto.includes("oracion")){
-
-respuesta = "🙏 La oración es una manera de comunicarnos con Dios con humildad y fe.";
+respuesta = "🙏 La oración es hablar con Dios con humildad y confianza.\n\n📖 Filipenses 4:6.";
 
 }
 
+else if(texto.includes("perdón") || texto.includes("perdon")){
+
+respuesta = "❤️ Jesús enseñó la importancia de perdonar.\n\n📖 Efesios 4:32.";
+
+}
+
+else if(texto.includes("bautismo")){
+
+respuesta = "💧 El bautismo representa una nueva vida en Cristo.\n\n📖 Romanos 6:4.";
+
+}
 
 else if(texto.includes("juan 3:16")){
 
-respuesta = "✨ Juan 3:16 muestra el gran amor de Dios al enviar a su Hijo Jesucristo para dar vida eterna.";
+respuesta = "✨ Juan 3:16 muestra el gran amor de Dios al enviar a Jesucristo para darnos vida eterna.";
 
 }
-
 
 chat.innerHTML += `
 <div class="bot">
