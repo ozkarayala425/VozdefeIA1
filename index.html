@@ -258,12 +258,16 @@ respuesta = "💧 El bautismo representa una nueva vida en Cristo.\n\n📖 Roman
 
 }
 
-else if(texto.includes("juan 3:16")){
 
-respuesta = "✨ Juan 3:16 muestra el gran amor de Dios al enviar a Jesucristo para darnos vida eterna.";
+else if(
+texto.includes("juan 3:16") ||
+texto.includes("juan 3 16") ||
+texto.includes("juan tres dieciseis")
+){
+
+respuesta = "✨ Juan 3:16 nos revela el gran amor de Dios por la humanidad.\n\n📖 Este versículo enseña que Dios entregó a su Hijo Jesucristo para ofrecernos salvación y vida eterna.\n\n🙏 Reflexión: El amor de Dios no depende de nuestras circunstancias; es un amor que busca restaurar, perdonar y acercarnos a Él.";
 
 }
-
 chat.innerHTML += `
 <div class="bot">
 ${respuesta}
