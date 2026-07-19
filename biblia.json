@@ -1,1 +1,28 @@
-
+[
+  {
+    "pregunta": "¿Quién es Dios?",
+    "respuesta": "Dios es el Creador de los cielos y la tierra, eterno, santo y lleno de amor.",
+    "versiculos": [
+      "Génesis 1:1",
+      "Salmo 90:2"
+    ],
+    "categoria": "Dios"
+  },
+  {
+    "pregunta": "¿Quién es Jesús?",
+    "respuesta": "Jesús es el Hijo de Dios, el Salvador del mundo y el camino hacia la vida eterna.",
+    "versiculos": [
+      "Juan 14:6",
+      "Juan 3:16"
+    ],
+    "categoria": "Jesucristo"
+  },
+  {
+    "pregunta": "¿Qué es la fe?",
+    "respuesta": "La fe es confiar en Dios y creer en sus promesas aun cuando no vemos todo claramente.",
+    "versiculos": [
+      "Hebreos 11:1"
+    ],
+    "categoria": "Vida cristiana"
+  }
+]
