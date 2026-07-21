@@ -42,7 +42,7 @@ ${texto}
 
 
 let respuesta =
-"PRUEBA NUEVA DE VOZDEFEIA ✅";
+"🙏 Gracias por tu pregunta. Sigue estudiando la Palabra de Dios 📖";
 
 for(let palabra in comentariosBiblicos){
 
