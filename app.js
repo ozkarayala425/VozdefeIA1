@@ -1,4 +1,43 @@
-const comentariosBiblicos = {
+function enviar(){
+
+let texto = document.getElementById("mensaje").value.toLowerCase();
+
+if(texto.trim()=="") return;
+
+let chat = document.getElementById("chat");
+
+chat.innerHTML += `
+<div class="user">
+${texto}
+</div>
+`;
+
+let respuesta =
+"🙏 Gracias por tu pregunta. Sigue estudiando la Palabra de Dios 📖";
+
+for(let palabra in comentariosBiblicos){
+
+if(texto.includes(palabra)){
+
+respuesta = comentariosBiblicos[palabra];
+
+break;
+
+}
+
+}
+
+chat.innerHTML += `
+<div class="bot">
+${respuesta}
+</div>
+`;
+
+document.getElementById("mensaje").value="";
+
+chat.scrollTop = chat.scrollHeight;
+
+}
 
 "fe":
 "🙏 FE\n\nLa fe es confiar en Dios y creer en sus promesas.\n\n📖 Hebreos 11:1",
