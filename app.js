@@ -45,12 +45,18 @@ let respuesta =
 "🙏 Gracias por tu pregunta. Sigue estudiando la Palabra de Dios 📖";
 
 
-if(comentariosBiblicos[texto]){
 
-respuesta = comentariosBiblicos[texto];
+for(let palabra in comentariosBiblicos){
+
+if(texto.includes(palabra)){
+
+respuesta = comentariosBiblicos[palabra];
+
+break;
 
 }
 
+}
 
 chat.innerHTML += `
 <div class="bot">
