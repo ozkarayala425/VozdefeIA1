@@ -24,7 +24,7 @@ const comentariosBiblicos = {
 };
 
 
-function enviar(){
+alert("APP.JS CARGADO");
 
 let texto = document.getElementById("mensaje").value.toLowerCase();
 
