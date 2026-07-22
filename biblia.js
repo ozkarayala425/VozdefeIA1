@@ -1,4 +1,30 @@
-const biblia = {
+const biblia = {  david: {
+    titulo: "David",
+    descripcion: "David fue un rey de Israel conocido por su fe en Dios y por derrotar a Goliat.",
+    versiculo: "1 Samuel 17",
+    reflexion: "Dios mira el corazón y fortalece a quienes confían en Él."
+  },
+
+  daniel: {
+    titulo: "Daniel",
+    descripcion: "Daniel permaneció fiel a Dios aun en medio de pruebas difíciles.",
+    versiculo: "Daniel 6",
+    reflexion: "La fidelidad a Dios trae fortaleza en los momentos difíciles."
+  },
+
+  jose: {
+    titulo: "José",
+    descripcion: "José fue vendido por sus hermanos, pero Dios lo levantó para salvar muchas vidas.",
+    versiculo: "Génesis 50:20",
+    reflexion: "Dios puede transformar las dificultades en bendiciones."
+  },
+
+  pablo: {
+    titulo: "Pablo",
+    descripcion: "Pablo fue un apóstol que anunció el evangelio a muchas naciones.",
+    versiculo: "Hechos 9",
+    reflexion: "Dios puede cambiar una vida y usarla para su propósito."
+  }
   pedro: {
     titulo: "Pedro",
     descripcion: "Pedro fue uno de los doce apóstoles.",
