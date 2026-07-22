@@ -19,7 +19,26 @@ const biblia = {
     versiculo: "Éxodo 3",
     reflexion: "Dios capacita a quienes llama."
   }
-};
+};"pedro":
+"👤 PEDRO\n\nPedro fue uno de los doce apóstoles de Jesús. Dejó sus redes para seguir al Maestro.\n\n📖 Mateo 4:19",
+
+"enoc":
+"👤 ENOC\n\nEnoc caminó con Dios y tuvo una relación cercana con Él.\n\n📖 Génesis 5:24",
+
+"resurreccion":
+"🌅 RESURRECCIÓN\n\nJesús venció la muerte y resucitó al tercer día, dando esperanza de vida eterna.\n\n📖 Mateo 28:6",
+
+"bautismo":
+"💧 BAUTISMO\n\nEl bautismo representa arrepentimiento y una nueva vida en Cristo.\n\n📖 Mateo 3:15",
+
+"espiritu santo":
+"🕊️ ESPÍRITU SANTO\n\nEl Espíritu Santo guía, fortalece y consuela a los creyentes.\n\n📖 Juan 14:26",
+
+"salvacion":
+"✝️ SALVACIÓN\n\nLa salvación es un regalo de Dios por medio de Jesucristo.\n\n📖 Efesios 2:8",
+
+"apocalipsis":
+"📖 APOCALIPSIS\n\nEl libro de Apocalipsis revela la victoria final de Dios y la esperanza para sus hijos.\n\n📖 Apocalipsis 21:4"
 const comentariosBiblicos = {
 
   "fe":
