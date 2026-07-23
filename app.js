@@ -6,7 +6,11 @@ const firebaseConfig = {
     messagingSenderId: "551507028497",
     appId: "1:551507028497:web:e1051705b49b6381369fb0",
     measurementId: "G-CJC1FEKT2V"
-  };
+};
+
+firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
 function enviar(){
 
   let texto = document.getElementById("mensaje").value.toLowerCase();
