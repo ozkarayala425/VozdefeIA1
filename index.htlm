@@ -237,3 +237,89 @@ placeholder="Escribe una pregunta bíblica">
 
 
 </div>
+
+<div class="card">
+
+<h2>📖 Versículo del día</h2>
+
+<p>
+"Todo lo puedo en Cristo que me fortalece."
+<br><br>
+Filipenses 4:13
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>✨ Reflexión del día</h2>
+
+<p>
+Dios tiene un propósito para tu vida. 
+Cada día es una oportunidad para crecer en fe,
+buscar su dirección y caminar en su verdad.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>📚 Biblioteca Bíblica</h2>
+
+<p>
+Explora temas de la Palabra de Dios.
+</p>
+
+
+<button>📖 Dios</button>
+
+<button>✝️ Jesucristo</button>
+
+<button>🙏 Fe</button>
+
+<button>🕊️ Oración</button>
+
+<button>👑 Personajes Bíblicos</button>
+
+<button>📜 Historias Bíblicas</button>
+
+
+</div>
+
+
+<div class="card">
+
+<h2>🙏 Oración del día</h2>
+
+<p>
+Señor, guía nuestros pasos, fortalece nuestra fe
+y ayúdanos a vivir conforme a tu Palabra.
+Amén.
+</p>
+
+</div>
+
+
+
+<footer>
+
+𓂀 OSCAR AYALA
+
+<br><br>
+
+VozdefeIA1 © 2026
+
+</footer>
+
+
+
+<script src="biblia.js"></script>
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
