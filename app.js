@@ -1,3 +1,12 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyBb_zbBfOUGZWRO6cSKYU4RmuBMZWYuAeI",
+    authDomain: "vozdefeapp.firebaseapp.com",
+    projectId: "vozdefeapp",
+    storageBucket: "vozdefeapp.firebasestorage.app",
+    messagingSenderId: "551507028497",
+    appId: "1:551507028497:web:e1051705b49b6381369fb0",
+    measurementId: "G-CJC1FEKT2V"
+  };
 function enviar(){
 
   let texto = document.getElementById("mensaje").value.toLowerCase();
