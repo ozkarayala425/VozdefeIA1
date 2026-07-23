@@ -1,1 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VozdefeIA1 - Voz de Fe</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#0b141a,#12355b);
+margin:0;
+color:white;
+}
+
+
+header{
+background:#202c33;
+text-align:center;
+padding:20px;
+}
+
+
+.logo img{
+width:90px;
+height:90px;
+border-radius:50%;
+border:3px solid #00a884;
+object-fit:contain;
+}
+
+
+h1{
+margin:10px;
+}
+
+
+.container{
+padding:15px;
+}
+
+
+.card{
+background:#202c33;
+max-width:600px;
+margin:20px auto;
+padding:20px;
+border-radius:18px;
+box-shadow:0 4px 12px rgba(0,0,0,.4);
+}
+
+
+select,
+input,
+button{
+
+padding:12px;
+border:none;
+border-radius:10px;
+font-size:16px;
+
+}
+
+
+select,
+input{
+
+width:100%;
+background:#2a3942;
+color:white;
+
+}
+
+
+button{
+
+background:#00a884;
+color:white;
+cursor:pointer;
+margin-top:10px;
+
+}
+
+
+.chat-box{
+
+background:#0b141a;
+height:400px;
+overflow:auto;
+padding:10px;
+border-radius:15px;
+
+}
+
+
+.bot{
+
+background:#202c33;
+padding:12px;
+margin:8px;
+border-radius:12px;
+}
+
+
+.user{
+
+background:#005c4b;
+padding:12px;
+margin:8px;
+border-radius:12px;
+text-align:right;
+
+}
+
+
+.input-area{
+
+display:flex;
+gap:8px;
+margin-top:10px;
+
+}
+
+
+.input-area input{
+
+flex:1;
+
+}
+
+
+.input-area button{
+
+width:80px;
+
+}
+
+
+footer{
+
+text-align:center;
+padding:20px;
+color:#ddd;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="logo">
+
+<img src="logo.png" alt="VozdefeIA1">
+
+</div>
+
+
+<h1>𓂀 VozdefeIA1</h1>
+
+<p>Una voz de fe para el mundo 🌎</p>
+
+
+</header>
+
+
+<div class="container">
+
+
+<div class="card">
+
+<h2>🌎 Idioma</h2>
+
+<select>
+
+<option>Español</option>
+<option>English</option>
+<option>Português</option>
+
+</select>
+
+</div>
+
+
+<div class="card">
+
+<h2>🤖 Chat Bíblico</h2>
+
+
+<div id="chat" class="chat-box">
+
+
+<div class="bot">
+
+🙏 Bienvenido a VozdefeIA1.
+
+<br><br>
+
+Escribe una pregunta sobre la Biblia y conversaré contigo.
+
+</div>
+
+
+</div>
+
+
+<div class="input-area">
+
+<input 
+id="mensaje"
+type="text"
+placeholder="Escribe una pregunta bíblica">
+
+
+<button onclick="enviar()">
+
+➤
+
+</button>
+
+
+</div>
+
+
+</div>
