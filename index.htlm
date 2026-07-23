@@ -23,11 +23,11 @@ color:white;
 
 
 header{
-background:#202c33;
+background:linear-gradient(135deg,#202c33,#0b141a);
 text-align:center;
-padding:20px;
+padding:25px;
+border-bottom:2px solid #00a884;
 }
-
 
 .logo img{
 width:90px;
